@@ -9,27 +9,27 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/home', function(req, res, next) {
-  res.render('index', { 
+  res.render('home', { 
     title: 'Home' });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('index', { 
+  res.render('about', { 
     title: 'About' });
 });
 
 router.get('/projects', function(req, res, next) {
-  res.render('index', { 
+  res.render('projects', { 
     title: 'Projects' });
 });
 
 router.get('/service', function(req, res, next) {
-  res.render('index', { 
+  res.render('service', { 
     title: 'Service' });
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('index', { 
+  res.render('contact', { 
     title: 'Contact' });
 });
 

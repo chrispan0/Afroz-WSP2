@@ -1,4 +1,7 @@
-body {
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: 'Arial', sans-serif;
     color: #333;
     background: linear-gradient(to right, #ffffff, #e9ecef);
@@ -6,19 +9,27 @@ body {
     padding: 0;
 }
 
+main {
+    flex: 1;
+    padding: 20px;
+}
+
 .navbar {
     background: #282c34;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
     color: #000000 !important;
 }
+
 .nav-link {
     color: #000000 !important;
     transition: color 0.3s ease;
 }
+
 .nav-link:hover {
     color: #81ecec !important;
 }
@@ -31,21 +42,25 @@ body {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .jumbotron h1 {
     font-size: 2.5rem;
     font-weight: 700;
 }
+
 .jumbotron p.lead {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
 }
+
 .jumbotron a.btn-primary {
-    background: #00cec9;
+    background: #00ccc9;
     border: none;
     padding: 0.8rem 1.5rem;
     font-weight: 600;
     transition: background 0.3s ease;
 }
+
 .jumbotron a.btn-primary:hover {
     background: #0984e3;
 }
@@ -62,11 +77,102 @@ h1 {
     font-weight: 600;
 }
 
+.footer {
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content a {
+    color: #81ecec;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #81ecec;
+}
+
+/* Centering and making responsive adjustments */
+.centered-img, .centered-video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure it scales responsively */
+}
+
+/* Ensure video container is responsive */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .jumbotron h1 {
         font-size: 2rem;
     }
+
     .navbar-brand {
         font-size: 1.25rem;
     }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+    background-color: #00ccc9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00ccc9;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
